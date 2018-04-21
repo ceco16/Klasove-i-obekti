@@ -1,0 +1,31 @@
+. #include <iostream>
+#include<cmath>
+using namespace std;
+class Point
+{
+ public:
+     float x;
+     float y;
+     void info()
+     {
+      cout<<"X:"<<x<<endl<<"Y:"<<y<<endl;
+     }
+     float dist(Point p)
+     {
+      float d;
+      d=sqrt((x-p.x)*(x-p.x))+((y-p.y)*(y-p.y));
+      return d;
+     }
+};
+int main()
+{
+    Point p1,p2;
+    p1.x=4;
+    p1.y=7;
+    p2.x=5;
+    p2.y=3;
+    p1.info();
+    p2.info();
+    cout<<p1.dist(p2)<<endl;
+
+}
