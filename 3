@@ -1,0 +1,56 @@
+#include <iostream>
+
+using namespace std;
+class Shape
+{
+ private:
+  double width;
+  double height;
+  double depth;
+  public:
+  double getW()
+  {
+    return width;  
+  }
+  void setW(double p)
+  {
+    width=p;  
+  }
+  double getH()
+  {
+    return height;  
+  }
+  void setH(double p)
+  {
+    height=p;  
+  }
+   double getD()
+  {
+    return depth;  
+  }
+  void setD(double p)
+  {
+    depth=p;  
+  }
+  double Area()
+  {
+    double V;
+    V=width*height*depth;
+    return V;
+  }
+  void info()
+  {
+    cout<<"W:"<<width<<endl<<"H:"<<height<<endl<<"D:"<<depth<<endl; 
+    cout<<"V:"<<Area()<<endl;
+  }
+};
+
+int main()
+{
+    class Shape f1;
+    f1.setW(3);
+    f1.setH(4);
+    f1.setD(5);
+    f1.info();
+    cout<<"V="<<f1.Area();
+}
