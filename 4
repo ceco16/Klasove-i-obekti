@@ -1,0 +1,54 @@
+
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+class Point
+{
+ private:
+ int x;
+ int y;
+ public:
+ friend double dist(Point p1,Point p2);
+ void setX(int a)
+ {
+ x=a; 
+ }
+ int getX()
+ {
+    return x; 
+ }    
+  void setY(int a)
+ {
+ y=a; 
+ }
+ int getY()
+ {
+    return y; 
+ }     
+ 
+}; 
+
+double dist(Point p1,Point p2)
+{
+  double d;
+  d=sqrt((p1.getX()-p2.getX())*(p1.getX()-p2.getX())+(p1.getY()-p2.getY())*(p1.getY()-p2.getY()));
+}
+
+int main()
+{
+   int n;
+   cout<<"Enter n:";
+   cin>>n;
+   Point p[n];
+   for(int i=0;i<n;i++)
+   {
+    int a,b;
+    cout<<"Enter x for point"<<i<<":";
+    cin>>a;
+    cout<<"Enter y for point"<<i<<":";
+    cin>>b;
+    p[i].setX(a);
+    p[i].setY(b);
+   }
+}
